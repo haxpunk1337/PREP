@@ -1,5 +1,6 @@
 
-
+Any doubt refere this > https://github.com/deFr0ggy/CEH-Practical-Preparation-Commands-Tools
+Detail note: every domain: https://github.com/admarnelson/CEH-V11-Practical/blob/main/Notes%20CEH
 --------------------------------------------------------------------
 
 1.     Download zip file
@@ -71,9 +72,13 @@
               /sdcard 
               adb pull /sdcard/tradeinfo ./ (adb pull /remote /local) 
 
-
+              For adb notes
+              https://www.hackeracademy.org/how-to-hack-android-device-with-adb-android-debugging-bridge/
+              https://github.com/u0652804/ADB-note
 
               If adb doesntwork
+              
+              Blog for andriod hacking: https://github.com/deFr0ggy/CEH-Practical-Preparation-Commands-Tools/blob/main/Android.md
 
               * Adding IP address to android phone:
                   - Open terminal emulator in android and type below command:
