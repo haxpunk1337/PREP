@@ -12,6 +12,13 @@
              ---->>> https://hashcat.net/wiki/doku.php?id=example_hashes  [for hashcat]
              ---->>> https://crackstation.net/ 
              ---->>> https://hashes.com/en/decrypt/hash 
+             
+             https://github.com/deFr0ggy/CEH-Practical-Preparation-Commands-Tools/blob/main/Hashcat.md
+
+              Firstly, see hash type
+              form https://www.tunnelsup.com/hash-analyzer/
+              if its base64 visit https://hashes.com/en/decrypt/hash 
+              https://crackstation.net/
 
               https://skynettools.com/free-online-hash-cracking-websites/ 
               http://rainbowtables.it64.com/ 
@@ -23,6 +30,17 @@
               https://github.com/System-CTL/CEH_CHEAT_SHEET/blob/main/Readme%20Carefully
               https://github.com/admarnelson/CEH-V11-Practical/blob/main/Notes%20CEH
               https://github.com/admarnelson/CEH-V11-Practical
+              
+              Try Hack me
+              https://sckull.github.io/posts/hashes/
+              https://embeddedworld.home.blog/2019/05/11/hacking-walk-through-cracking-the-hashes/
+              
+        > Find PCAP
+               Download Network Miner (https://www.netresec.com/index.ashx?page=Networkminer)
+               https://packettotal.com/
+               https://pcap.honeynet.org.my/v1/
+               https://apackets.com/upload
+               
 
        
 2.     
