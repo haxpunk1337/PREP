@@ -6,6 +6,7 @@ Detail note: every domain: https://github.com/admarnelson/CEH-V11-Practical/blob
 1.     Download zip file
        > Zenmap normal scan to list all ip
        > Zenmap intense scan
+       > open winscp
        > Advance IP scanner ( go to option then check all services)
        > Global Network inventory Scan
        > Find Hash file
@@ -62,6 +63,16 @@ Detail note: every domain: https://github.com/admarnelson/CEH-V11-Practical/blob
                https://apackets.com/upload
                wireshark
                
+               Detect Dos: https://www.youtube.com/watch?v=MphYj90_eJA
+                 
+                                   load pcap
+                                   Statics > IPV4 OR IPV6 ANY ONE
+                                   CHECK ON SOURCE AND DESTINATIONS
+                                   OR
+                                   CHECK DESTINATION OR PORTS
+                                   CHECK HIGHT COUNT
+
+
 
        
 4.            Now find andriod ip then
