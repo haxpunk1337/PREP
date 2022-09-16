@@ -1,0 +1,29 @@
+
+
+--------------------------------------------------------------------
+
+1.     Download zip file
+       > Zenmap normal scan to list all ip
+       > Zenmap intense scan
+       > Advance IP scanner ( go to option then check all services)
+       > Global Network inventory Scan
+       > Find Hash file
+             ..****CRACKING THE HASHES**** 
+             ---->>> https://hashcat.net/wiki/doku.php?id=example_hashes  [for hashcat]
+             ---->>> https://crackstation.net/ 
+             ---->>> https://hashes.com/en/decrypt/hash 
+
+              https://skynettools.com/free-online-hash-cracking-websites/ 
+              http://rainbowtables.it64.com/ 
+              https://md5decrypt.net/en/ 
+              https://hashkiller.io/listmanager 
+              https://www.tunnelsup.com/hash-analyzer/ 
+
+              If its hard follow this
+              https://github.com/System-CTL/CEH_CHEAT_SHEET/blob/main/Readme%20Carefully
+              https://github.com/admarnelson/CEH-V11-Practical/blob/main/Notes%20CEH
+              https://github.com/admarnelson/CEH-V11-Practical
+
+       
+2.     
+
