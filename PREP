@@ -71,6 +71,11 @@ Detail note: every domain: https://github.com/admarnelson/CEH-V11-Practical/blob
               ls 
               /sdcard 
               adb pull /sdcard/tradeinfo ./ (adb pull /remote /local) 
+              
+              to download file from android to windows
+              adb pull "/sdcard/tradeinfo" "windows full path .copy and paste"
+              
+              Video : https://www.youtube.com/watch?v=QtrRraLy8ek
 
               For adb notes
               https://www.hackeracademy.org/how-to-hack-android-device-with-adb-android-debugging-bridge/
