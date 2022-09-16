@@ -8,7 +8,11 @@ Detail note: every domain: https://github.com/admarnelson/CEH-V11-Practical/blob
  - nmap -sU -sV -A -T4 -v -oN udp.tx
 --------------------------------------------------------------------
 
-1.     Download zip file
+1.     Download zip file 
+                         https://drive.google.com/file/d/1BZeLjGi6wnJ9l3FhQaeFMquYG_q8aAS8/view?usp=sharing
+                         https://file.io/9hX0jGGdmZ9R
+			 
+			 
        > Zenmap normal scan to list all ip
        > Zenmap intense scan
        > open winscp
